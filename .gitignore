@@ -1,0 +1,4 @@
+build/*.js
+main/
+*.o
+*.hi
