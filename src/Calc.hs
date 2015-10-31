@@ -11,5 +11,5 @@ main = do
     onEvent input KeyUp $ \ e -> do
         Just ln <- getValue input
         case parse expr "" ln of
-             Right s -> setProp output "innerText" (show s)
-             Left l -> setProp output "innerText" (show l)
+             Right s -> setProp output "textContent" (show s)
+             Left l -> setProp output "textContent" (show l)
