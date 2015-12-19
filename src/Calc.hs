@@ -10,6 +10,7 @@ main = do
     Just output <- elemById "output"
     onEvent input KeyUp $ \ e -> do
         Just ln <- getValue input
+        writeLog ln
         case parse expr "" ln of
              Right s -> setProp output "textContent" (show s)
              Left l -> setProp output "textContent" (show l)
